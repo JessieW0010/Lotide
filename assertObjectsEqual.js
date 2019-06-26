@@ -1,5 +1,3 @@
-// Returns true if both objects have identical keys with identical values.
-// Otherwise you get back a big fat false!
 const eqObjects = function(object1, object2) {
 
   let equivalent = false;
@@ -49,17 +47,22 @@ const eqObjects = function(object1, object2) {
 
 };
 
-//primitive values test
-const abc = { a: "1", b: "2", c: "3" };
-const ab = { a: "1", b: "2" };
-const ba = { b: "2", a: "1" };
-console.log(eqObjects(ab, ba)); // => true)
-console.log(eqObjects(ab, abc)); // => false
 
-//arrays test
-const cd = { c: "1", d: ["2", 3] };
-const cd2 = { c: "1", d: ["2", 4] };
-const dc = { d: ["2", 3], c: "1"};
-console.log(eqObjects(cd, dc)); // => true
-console.log(eqObjects(cd, cd2)); // => false
+const assertObjectsEqual = function(actual, expected) {
+  const inspect = require('util').inspect; 
+  if (eqObjects(actual, expected)) {  //objects are same
+    console.log(`😜😍🍆Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`);
+  } else {  //objects are different
+    console.log(`😡🤮🤢Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`);
+  }
+}
 
+const obj1 = {
+  val1: ["hi", "hey"],
+  val2: ["hey", "hola"]
+}
+const obj2 = {
+  val1: ["hi", "hey"],
+  val2: ["hey", "hola"]
+}
+assertObjectsEqual(obj1, obj2);
