@@ -31,3 +31,7 @@ The following functions are currently implemented:
 * `middle(...)`: returns the middle element(s) of the inputted array
 * `flatten(...)`: returns the flattened array of an inputted nested array
 * `countOnly(...)`: takes an inputted array (keys) and object and returns an object containing the matching keys and their value
+* `letterPositions(...)`: takes an input string and letter and returns the index of that letter within the string
+* `findKeyByValue(...)`: takes an input object and value and returns the key that contains that value
+* `eqObjects(...)`: assesses whether two objects are equal (returns true or false)
+* `eqArrays(...)`: assesses whether two arrays are equal (returns true or false)
