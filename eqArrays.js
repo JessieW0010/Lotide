@@ -1,5 +1,5 @@
 //copied assertEqual function
-const assertEqual = require("./assertEqual");
+// const assertEqual = require("./assertEqual");
 
 // const assertEqual = function(actual, expected) {
 //   if (actual !== expected) {

@@ -1,9 +1,4 @@
-// //primitive values test
-// const abc = { a: "1", b: "2", c: "3" };
-// const ab = { a: "1", b: "2" };
-// const ba = { b: "2", a: "1" };
-// console.log(eqObjects(ab, ba)); // => true)
-// console.log(eqObjects(ab, abc)); // => false
+
 
 // //arrays test
 // const cd = { c: "1", d: ["2", 3] };
@@ -15,6 +10,13 @@
 const lotide = require("../index");
 const assert = require("chai").assert;
 
-describe("assesses whether two objects are equal", () => {
-  
+describe("#eqObjects", () => {
+  it("should equal true"), () => {
+    //primitive values test
+    const abc = { a: "1", b: "2", c: "3" };
+    const ab = { a: "1", b: "2" };
+    const ba = { b: "2", a: "1" };
+    assert.strictEqual(lotide.eqObjects(ab, ba), true); // => true)
+    assert.strictEqual(lotide.eqObjects(ab, abc), false); // => false
+  }
 })
